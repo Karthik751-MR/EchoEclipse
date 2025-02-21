@@ -1,0 +1,10 @@
+google-cloud-speech==2.16.0
+pydub==0.25.1
+langdetect==1.0.9
+transformers==4.28.0
+torch
+numpy
+requests
+twilio
+resemblyzer
+python-dotenv

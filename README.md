@@ -38,7 +38,11 @@ pandas (data handling)
 
 scikit-learn (ML-based classification)
 
-twilio (for call handling, if applicable)
+SMTP (for call handling, if applicable)
+
+Proposed architecture
+
+![fintech hack  drawio (3)](https://github.com/user-attachments/assets/359b164f-c254-48c1-9d1e-2875da63c608)
 
 
 🔧 Installation & Setup

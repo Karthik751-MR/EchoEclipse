@@ -1,64 +1,61 @@
-EchoEclipse: AI-Driven Scam Call Detection
+EchoEclipse - Real-Time Spam Call Detection
 
 
 
 📌 Overview
 
-EchoEclipse is an AI-powered scam call detection system that helps users identify and filter fraudulent calls in real time. It leverages speech recognition, natural language processing (NLP), and machine learning to analyze call audio and flag potential scam attempts.
+EchoEclipse is an AI-powered spam call detection app that identifies spam calls in real-time and alerts users before they answer. Designed for privacy and efficiency, the app provides a seamless experience without compromising user security.
 
-🚀 Features
+🔥 Features
 
-Real-time scam call detection using AI models.
+✅ Real-time Spam Detection – Uses AI & external APIs to detect spam calls.
+✅ Caller ID Lookup – Fetches caller details from trusted sources.
+✅ Customizable Alerts – Visual & sound notifications for spam calls.
+✅ Minimal UI – Simple, user-friendly interface for easy interaction.
+✅ Battery Efficient – Optimized to run in the background without draining battery.
 
-Speech-to-text transcription via Vosk ASR.
+🚀 Tech Stack
 
-NLP-based scam keyword detection.
+Android Studio (Java) – Core development
 
-Call risk scoring with a dynamic threshold.
+Machine Learning Model – Spam detection
 
-Customizable trusted number list.
+Caller ID API (NumLookup, Truecaller API, etc.)
 
-Audio logging and analysis.
+Firebase (Optional) – Storing spam reports
 
-🛠️ Tech Stack
+AccessibilityService & CallScreeningService – Handling call detection
 
-Programming Language: Python
-
-Machine Learning: TensorFlow / PyTorch (for NLP)
-
-Speech Recognition: Vosk API
-
-Data Storage: CSV / JSON for call logs
-
-APIs & Libraries:
-
-vosk (ASR for speech recognition)
-
-pandas (data handling)
-
-scikit-learn (ML-based classification)
-
-SMTP (for call handling, if applicable)
-
-Proposed architecture
-
-![fintech hack  drawio (3)](https://github.com/user-attachments/assets/359b164f-c254-48c1-9d1e-2875da63c608)
+![image](https://github.com/user-attachments/assets/10b365f7-d0f9-4cd1-a31c-8c97c41685ea)
 
 
-🔧 Installation & Setup
 
-Clone the repository:
+🛠️ Installation Guide
 
-git clone https://github.com/your-username/EchoEclipse.git
+1️⃣ Clone the Repository
+
+git clone https://github.com/yourusername/EchoEclipse.git
 cd EchoEclipse
 
-Install dependencies:
+2️⃣ Open in Android Studio
 
-pip install -r requirements.txt
+Open Android Studio → Open Project → Select the cloned folder.
 
-Run the main script:
+3️⃣ Set Up Permissions
 
-python main.py
+Grant required permissions for call screening & accessibility in settings.
+
+4️⃣ Build & Run
+
+Click Run ▶ in Android Studio or generate an APK.
+
+🔗 API Integration
+
+Ensure API keys are set in res/values/strings.xml.
+
+Example (NumLookup API):
+
+<string name="api_key">YOUR_API_KEY</string>
 
 🎯 How It Works
 
@@ -84,3 +81,13 @@ Calls from trusted numbers (configurable) are ignored.
 
 
 💡 Why So Serious About Scams? Let’s End Them! 🚀
+
+📜 License
+
+This project is licensed under the MIT License.
+
+🌟 Support & Feedback
+
+Have suggestions or issues? Open an issue or contact us via LinkedIn.
+
+

@@ -1,0 +1,16 @@
+timestamp,caller_number,audio_file,transcript,language,trusted_caller,voice_match,risk_score,keywords,status
+2025-02-22 10:56:27,+18001234567,incoming_call1.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call1.wav'
+2025-02-22 10:56:27,+18001234567,incoming_call2.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call2.wav'
+2025-02-22 10:56:28,+18001234567,incoming_call3.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call3.wav'
+2025-02-22 10:56:28,+18001234567,incoming_call4.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call4.wav'
+2025-02-22 10:56:29,+18001234567,incoming_call5.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call5.wav'
+2025-02-22 10:58:04,+18001234567,incoming_call1.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call1.wav'
+2025-02-22 10:58:05,+18001234567,incoming_call2.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call2.wav'
+2025-02-22 10:58:05,+18001234567,incoming_call3.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call3.wav'
+2025-02-22 10:58:05,+18001234567,incoming_call4.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call4.wav'
+2025-02-22 10:58:06,+18001234567,incoming_call5.wav,,,False,False,0,[],error: [Errno 2] No such file or directory: 'incoming_call5.wav'
+2025-02-22 11:00:07,+18001234567,audio/incoming_call1.wav,now must the yea up gay bank guess iraq shove park said john boehner hung up get caught they miss and dig dug a dvd by guy you op key hot they could blow cooney say by johnny give you a groupie up now puranam hot that some killer of he plopped key or or odp saw getting yeah but generally here,en,Bank A,False,0,[],safe
+2025-02-22 11:00:11,+18001234567,audio/incoming_call2.wav,hi this is sam from it's like that monk we noticed some recent activity and want to confirm it's you please log into your official banking up for review your transactions we will never ask for your password out the the over the phone,en,Bank A,False,0,[],safe
+2025-02-22 11:00:15,+18001234567,audio/incoming_call3.wav,the low this is john from your hands security department we have the acted suspicious activity on your account to prevent it from being frozen please provide your full name account number and the of the the you just received the divergence on the delete option,en,Bank A,False,0,['account number'],safe
+2025-02-22 11:00:19,+18001234567,audio/incoming_call4.wav,one of them either x y z one deal it in this era said get out some me but the a sale party really sorry but of it and but you don't wander are they got a will lunghi by in the wooing the doom go buddy motrin girl a part of eleven younger longer carnival told a little or dp katie ricardo,en,Bank A,False,0,[],safe
+2025-02-22 11:00:24,+18001234567,audio/incoming_call5.wav,one of them either longer one gain by the gop poopy we live in their john pc get at longer garnett in san diego mine sale party candidate but to the one girl garnet good mood a couple of million gay one game whoopee at carnegie and much on that a pool the picture wearing of whom you either are sit em,en,Bank A,False,0,[],safe

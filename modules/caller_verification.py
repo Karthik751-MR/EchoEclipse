@@ -1,8 +1,10 @@
 import json
 import os
+from pathlib import Path
 
 # Cache the trusted numbers so that the file is not reloaded on every call
 _TRUSTED_NUMBERS_CACHE = None
+TRUSTED_NUMBERS_PATH = Path(__file__).resolve().parent.parent / "config" / "trusted_numbers.json"
 
 
 def load_trusted_numbers():
@@ -16,16 +18,16 @@ def load_trusted_numbers():
     if _TRUSTED_NUMBERS_CACHE is None:
         try:
             # Ensure the config directory exists
-            os.makedirs("config", exist_ok=True)
+            os.makedirs(TRUSTED_NUMBERS_PATH.parent, exist_ok=True)
 
             # Load trusted numbers from the JSON file
-            with open("config/trusted_numbers.json", "r") as file:
+            with open(TRUSTED_NUMBERS_PATH, "r", encoding="utf-8") as file:
                 _TRUSTED_NUMBERS_CACHE = json.load(file)
         except FileNotFoundError:
             print("Trusted numbers file not found. Creating an empty one.")
             _TRUSTED_NUMBERS_CACHE = {}
             # Create an empty JSON file if it doesn't exist
-            with open("config/trusted_numbers.json", "w") as file:
+            with open(TRUSTED_NUMBERS_PATH, "w", encoding="utf-8") as file:
                 json.dump(_TRUSTED_NUMBERS_CACHE, file)
         except json.JSONDecodeError:
             print("Error decoding JSON. The file may be corrupted.")

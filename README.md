@@ -1,93 +1,64 @@
-EchoEclipse - Real-Time Spam Call Detection
+# EchoEclipse
 
+AI-assisted pipeline for scam/spam call analysis using speech-to-text, language detection, keyword/sentiment analysis, and rule-based risk scoring.
 
+## Project Status
+This repository currently provides a Python proof-of-concept pipeline and module-level utilities. It is not an Android app project in its present state.
 
-📌 Overview
+## Repository Structure
 
-EchoEclipse is an AI-powered spam call detection app that identifies spam calls in real-time and alerts users before they answer. Designed for privacy and efficiency, the app provides a seamless experience without compromising user security.
+- `main.py` – End-to-end call processing pipeline and CSV logging.
+- `modules/` – Core components:
+  - `speech_to_text.py` – Vosk transcription wrapper.
+  - `language_detection.py` – Language detection using `langdetect`.
+  - `nlp_analysis.py` – Keyword matching and sentiment analysis.
+  - `risk_scoring.py` – Rule-based risk score computation.
+  - `caller_verification.py` – Trusted-number checks from config JSON.
+  - `alerting.py` – Alert channels (WhatsApp/SMS/Email).
+  - `voice_biometrics.py` – Experimental voice feature extraction/comparison.
+- `config/trusted_numbers.json` – Trusted caller whitelist.
+- `audio/` – Sample call audio files.
+- `tests/` – Unit tests.
+- `models/` – Local speech model files.
 
-🔥 Features
+## Quickstart
 
-✅ Real-time Spam Detection – Uses AI & external APIs to detect spam calls.
-✅ Caller ID Lookup – Fetches caller details from trusted sources.
-✅ Customizable Alerts – Visual & sound notifications for spam calls.
-✅ Minimal UI – Simple, user-friendly interface for easy interaction.
-✅ Battery Efficient – Optimized to run in the background without draining battery.
+### 1) Create environment and install dependencies
 
-🚀 Tech Stack
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-Android Studio (Java) – Core development
+### 2) Optional: configure alerts
 
-Machine Learning Model – Spam detection
+Create `.env` if you want email/SMS alert channels:
 
-Caller ID API (NumLookup, Truecaller API, etc.)
+```env
+ALERT_EMAIL=your_email@example.com
+ALERT_EMAIL_PASSWORD=your_app_password
+```
 
-Firebase (Optional) – Storing spam reports
+### 3) Run tests
 
-AccessibilityService & CallScreeningService – Handling call detection
+```bash
+python -m pytest -q
+```
 
-![image](https://github.com/user-attachments/assets/10b365f7-d0f9-4cd1-a31c-8c97c41685ea)
+### 4) Run the pipeline
 
+```bash
+python main.py
+```
 
+## Notes
 
-🛠️ Installation Guide
+- Vosk models are expected under `models/`.
+- `call_logs.csv` is treated as a runtime artifact and ignored by git.
+- Alerting integrations may require external login/browser interaction.
 
-1️⃣ Clone the Repository
+## Development
 
-git clone https://github.com/yourusername/EchoEclipse.git
-cd EchoEclipse
-
-2️⃣ Open in Android Studio
-
-Open Android Studio → Open Project → Select the cloned folder.
-
-3️⃣ Set Up Permissions
-
-Grant required permissions for call screening & accessibility in settings.
-
-4️⃣ Build & Run
-
-Click Run ▶ in Android Studio or generate an APK.
-
-🔗 API Integration
-
-Ensure API keys are set in res/values/strings.xml.
-
-Example (NumLookup API):
-
-<string name="api_key">YOUR_API_KEY</string>
-
-🎯 How It Works
-
-The system records or receives incoming call audio.
-
-It converts speech to text using Vosk ASR.
-
-NLP algorithms analyze the text for scam-related patterns.
-
-A risk score is generated, flagging suspicious calls.
-
-Calls from trusted numbers (configurable) are ignored.
-
-📌 Future Improvements
-
-✅ Enhance NLP model accuracy with more training data.
-
-✅ Integrate with real-time phone call APIs.
-
-✅ Implement a mobile app for notifications.
-
-✅ Improve UI for better user experience.
-
-
-💡 Why So Serious About Scams? Let’s End Them! 🚀
-
-📜 License
-
-This project is licensed under the MIT License.
-
-🌟 Support & Feedback
-
-Have suggestions or issues? Open an issue or contact us via LinkedIn.
-
-
+- Formatting/lint config is defined in `pyproject.toml`.
+- Test discovery is configured for the `tests/` directory.
